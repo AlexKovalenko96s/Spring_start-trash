@@ -10,8 +10,10 @@ public class Main {
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("Application.xml");
-		Robot_Vasya robot_vasya = (Robot_Vasya) context.getBean("Robot_Vasya");
-		robot_vasya.fire();
-		// robot_vasya.go();
+		Robot_Vasya robot_vasya = (Robot_Vasya) context.getBean("Robot_Vasya1");
+		// robot_vasya.fire();
+		robot_vasya.color_year_sound();
+		robot_vasya = (Robot_Vasya) context.getBean("Robot_Vasya");
+		robot_vasya.go();
 	}
 }

@@ -4,7 +4,19 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="Robot_Vasya"
-		class="ua.kas.spring_test.robots_model.Robot_Vasya">
+	<bean id="Robot_Vasya" class="ua.kas.spring_test.robots_model.Robot_Vasya">
+<!-- 	<constructor-arg ref="head_impl"/> -->
+<!-- 	<constructor-arg ref="body_impl"/> -->
+	<property name="head" ref="head_impl"></property>
+	<property name="body" ref="body_impl"></property>
 	</bean>
+	
+	<bean id="Robot_Vasya1" class="ua.kas.spring_test.robots_model.Robot_Vasya">
+		<constructor-arg value="RED" index="0" type="String"/>
+		<constructor-arg value="2007" index="1" type="int"/>
+		<constructor-arg value="true" index="2" type="boolean"/>
+	</bean>
+
+	<bean id="body_impl" class="ua.kas.spring_test.class_implementation.Body_impl"/>
+	<bean id="head_impl" class="ua.kas.spring_test.class_implementation.Head_impl"/>
 </beans>
