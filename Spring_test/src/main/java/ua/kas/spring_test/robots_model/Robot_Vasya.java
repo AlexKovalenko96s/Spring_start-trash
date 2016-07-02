@@ -42,6 +42,10 @@ public class Robot_Vasya implements Robot {
 		head.think();
 	}
 
+	public void initObject() {
+		System.out.println("init");
+	}
+
 	public Head getHead() {
 		return head;
 	}
